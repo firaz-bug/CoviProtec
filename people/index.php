@@ -524,7 +524,7 @@
 		            <div class="icon-box">
 		              <div class="icon"><i class="fas fa-user-friends"></i></div>
 		              <h4><input type = "submit" class="btn btn-primary" value = "Combined" name ="combined"></h4>
-		              <p>Click here for combined booking</p>
+		              <p>Click here to schedule an appointment for combined booking i.e both account holder and person you added</p>
 		            </div>
 		          </div>';
 		    }
@@ -671,7 +671,7 @@
           &copy; Copyright <strong><span>Covid Drive</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-          Designed by <a href=""></a>
+          Designed And Developed By <a href="#"> Lalit , Shashi and barath</a>
         </div>
       </div>
     </div>

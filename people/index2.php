@@ -146,7 +146,7 @@
 					}
 
 					if($_SESSION['user_number'] == 1){
-						echo $_SESSION["name"];
+						echo "Aadhar Id : ";
 						echo $_SESSION["aadhar_ID"];
 						echo "<br>";
 						$resultexist = idExists($con, $_SESSION['aadhar_ID']);
