@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Coviprotec</title>
+  <title>CoviProtec</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,7 @@
         <div class="section-title">
           <div><img src="assets/img/logo.png" alt="logo" height="120" width="120">
             <br>
-            <h2>Coviprotec</h2></div>
+            <h2>CoviProtec</h2></div>
             <h3><b>" Vaccines are the tugboats of preventive health "</b></h3>
         </div>
 
@@ -53,7 +53,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-virus"></i></div>
               <h4><a href="people/index.php">Covid vaccine registeration</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <p> Click here to register for vaccination at the place of your convenience </p>
             </div>
           </div>
 
@@ -61,7 +61,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-hospital-user"></i></div>
               <h4><a href="hospital/index1.php">Register Hospital</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <p>Click here to become legally entitled hospital to provide vaccination </p>
             </div>
           </div>
 

@@ -91,7 +91,7 @@
 								</div>
 
 								<div class="form-group">
-									<label for="phone">phone number</label>
+									<label for="phone">Phone Number</label>
 									<input id="phone" type="text" class="form-control" name="phone" required>
 									<div class="invalid-feedback">
 										 Enter phone number

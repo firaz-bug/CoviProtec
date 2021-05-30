@@ -25,8 +25,8 @@
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>Hospital Login Page</title>
-	<link href="assets/img/logo.png" rel="icon">
-  	<link href="assets/img/logo.png" rel="logo">
+	<link href="../assets/img/logo.png" rel="icon">
+  	<link href="../assets/img/logo.png" rel="logo">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../assets/css/my-login.css">
 </head>
@@ -53,7 +53,7 @@
 
 								<div class="form-group">
 									<label for="password">Password
-										<a href="forgotpassword.php" class="float-right">
+										<a href="#" class="float-right">
 											Forgot Password?
 										</a>
 									</label>

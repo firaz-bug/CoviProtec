@@ -26,6 +26,34 @@
 
 
 	}
+
+	function idExists( $con, $nabh ){
+
+			$sql = "SELECT * FROM vaccine_date WHERE hospital_nabh_ID = ?;";
+			$stmt = mysqli_stmt_init($con);
+
+			if(!mysqli_stmt_prepare($stmt, $sql)){
+				header("Location: index.php?error=stmtfailed");
+				exit();
+			}
+
+			mysqli_stmt_bind_param($stmt, "i", $nabh);
+			mysqli_stmt_execute($stmt);
+
+			$resultData = mysqli_stmt_get_result($stmt);
+
+			if($row = mysqli_fetch_assoc($resultData)){
+				$result = true;
+				return $result;
+			}
+
+			else{
+				$result = false;
+				return $result;
+}
+
+mysqli_stmt_close($stmt);
+}
 ?>
 
 <!DOCTYPE html>
@@ -88,13 +116,18 @@
 									</div>
 								</div>
 
-								<div class="form-group">
-									<label for="vaccine_perDay">Amount of vaccine to use per day</label>
-									<input id="vaccines_perDay" type="number" class="form-control" name="vaccines_perDay" value="" required autofocus>
-									<div class="invalid-feedback">
+								<?php
+								if( !idExists($con,$_SESSION['user_id'])){
+
+								echo"<div class='form-group'>
+											<label for='vaccine_perDay'>Amount of vaccine to use per day</label>
+											<input id='vaccines_perDay' type='number' class='form-control' name='vaccines_perDay' value='' required autofocus>
+										<div class='invalid-feedback'>
 										invalid
-									</div>
-								</div>
+										</div>
+								</div>";
+							}
+							?>
 
 								<div class="form-group m-0">
 									<button type="reset" class="btn btn-primary btn-block" name="reset">
@@ -124,4 +157,3 @@
 	<script src="../assets/js/my-login.js"></script>
 </body>
 </html>
-

@@ -76,7 +76,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Coviprotec</title>
+  <title>CoviProtec</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -110,7 +110,7 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.php">Coviprotec</a></h1>
+      <h1 class="logo me-auto"><a href="index.php">CoviProtec</a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link" href="logout.php">Log out</a></li>
@@ -415,6 +415,22 @@
 
 				$resultData_vaccine = mysqli_stmt_get_result($stmt_vaccine);
 				$row_vaccine = mysqli_fetch_assoc($resultData_vaccine);
+				
+				//SELECTING FROM VACCINE DATE FOR VACCINE PER DAY
+				$sql_vaccine_per_day = "SELECT * FROM vaccine_date WHERE hospital_nabh_id = ?;";
+				$stmt_vaccine_per_day = mysqli_stmt_init($con_hosp);
+
+				if(!mysqli_stmt_prepare($stmt_vaccine_per_day, $sql_vaccine_per_day)){
+					header("Location: index2.php?error=stmtfailed");
+					exit();
+				}
+
+				mysqli_stmt_bind_param($stmt_vaccine_per_day, "i", $row['hospital_nabh_id']);
+				mysqli_stmt_execute($stmt_vaccine_per_day);
+
+				$resultData_vaccine_per_day = mysqli_stmt_get_result($stmt_vaccine_per_day);
+				$row_vaccine_per_day = mysqli_fetch_assoc($resultData_vaccine_per_day);
+
 
 	//			$_SESSION['hospital_nabh_id'] = $row["hospital_nabh_id"];
 				echo "<tr>
@@ -431,23 +447,42 @@
 
 					$covaxin =  $row['hospital_nabh_id']."covaxin".$j;
 					$covishield = $row['hospital_nabh_id']."covishield".$j;
-					if($row_vaccine['curr_covaccine'] > 0){
-					#	echo "<br>Covaxin Count: ".$row_vaccine['curr_covaccine'];
-						echo "
-								<th><input type='submit' class='btn btn-primary' name='".$covaxin."' value='covaxin'>
+					$vaccine_stock_per_day = "vaccine_per_day".$j;
+					
+					if($row_vaccine['curr_covaccine'] > 0 && $row_vaccine_per_day[$vaccine_stock_per_day] > 0){
+						if($_SESSION['user_number'] == 3 && ($row_vaccine_per_day[$vaccine_stock_per_day] <= 1 || $row_vaccine['curr_covaccine'] <= 1)){
+							echo "<th>Only one vaccine is left for that day. So both of you cannot book.</th>"; 
+						}
+						else{
+							#echo "<br>Covaxin Count: ".$row_vaccine['curr_covaccine'];
+							echo "<th><input type='submit' class='btn btn-primary' name='".$covaxin."' value='covaxin'>
 								</th>
 								";
+						}
 					}
 					else{
-						echo "<th>Covaxin Not available!</th>";
+						echo "<th>Covaxin Not available! Or the upper limit of total number of vaccines per day of the hospital has crossed!</th>";
 					}
-					if($row_vaccine['curr_covisheild'] > 0){
+					
+					if($row_vaccine['curr_covisheild'] > 0 && $row_vaccine_per_day[$vaccine_stock_per_day] > 0){
+						if($_SESSION['user_number'] == 3 && ($row_vaccine_per_day[$vaccine_stock_per_day] <= 1 || $row_vaccine['curr_covisheild'] <= 1)){
+							echo "<th>Only one vaccine is left for that day. So both of you cannot book.</th>"; 
+						}
+						else{
+							#echo "<br>Covishield Count: ".$row_vaccine['curr_covisheild'];
+							echo "<th><input type='submit' class='btn btn-primary' name='".$covishield."' value='covishield'></th>";
+						}
+					}
+					else{
+						echo "<th>Covishield Not available! Or the upper limit of total number of vaccines per day of the hospital has crossed!</th>";
+					}
+					/*	
 					#	echo "<br>Covishield Count: ".$row_vaccine['curr_covisheild'];
 						echo "<th><input type='submit' class='btn btn-primary' name='".$covishield."' value='covishield'></th>";
 					}
 					else{
 						echo "<th>Covishield Not available!</th>";
-					}
+					}*/
 					echo "<td>".$row_vaccine['VaccinesPerDay']."</td></tr>";
 
 					$j = $j + 1;

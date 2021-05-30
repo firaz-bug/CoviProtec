@@ -1,5 +1,5 @@
 <?php
-
+  date_default_timezone_set("Asia/Kolkata");
 	session_start();
 	include("connection.php");
 	include("connection_hosp.php");
@@ -109,7 +109,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Coviprotec</title>
+  <title>CoviProtec</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -160,7 +160,7 @@
  	<section id="hero" class="d-flex align-items-center">
 	    <div class="container">
 	      	<h1>Hello,<?php echo $_SESSION["name"]; ?></h1> 
-	  		<h1>Welcome to covid drive</h1>
+	  		<h1>Welcome to CoviProtec</h1>
 	      <a href="#about" class="btn-get-started scrollto">Get Started</a>
 	    </div>
     </section>
@@ -173,10 +173,9 @@
         <div class="row">
           <div class="col-lg-4 d-flex align-items-stretch">
             <div class="content">
-              <h3>Why Choose Covid Drive?</h3>
+              <h3>Why CoviProtec?</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-                Asperiores dolores sed et. Tenetur quia eos. Autem tempore quibusdam vel necessitatibus optio ad corporis.
+                Our aim is to facilitate vaccine registration. We with an common goal have partnered with other trustworthy organisations to provide you with best of services. We ensure that you can securely schedule an appointment to get vaccinated at a place of your convenience. Join us in our fight against <b>COVID-19</b>.
               </p>
               <div class="text-center">
                 <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
@@ -189,22 +188,22 @@
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-receipt"></i>
-                    <h4>Corporis voluptates sit</h4>
-                    <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                    <h4>Our service</h4>
+                    <p>We provide informatuon on vaccine availability at different hospitals at your reach.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-cube-alt"></i>
-                    <h4>Ullamco laboris ladore pan</h4>
-                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                    <h4>Procedure</h4>
+                    <p>We request you to take both the doses booked through our site. You will be prohibited to book for dose 2 directly without booking dose 1 through our site. You will be able to book for your dose 2 after 30 days have passed since taking dose 1.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box mt-4 mt-xl-0">
                     <i class="bx bx-images"></i>
-                    <h4>Labore consequatur</h4>
-                    <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                    <h4>Other facilities</h4>
+                    <p>We also provide you with the facility to cancel your appointment until 1 day before the booked date. We also provide you the link to get yourself a ride to the booked location.</p>
                   </div>
                 </div>
               </div>
@@ -434,7 +433,7 @@
 	if ($num == 1){
         echo '<div class="section-title">
           <h2>Add Member</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Click the button below to register for one of your loved ones so that you can start booking appointment together!</p>
         </div>
 
           <div class="row">
@@ -485,7 +484,7 @@
 
         <div class="section-title">
           <h2>Appoinment Booking</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Choose for which user you want to book a slot for:</p>
         </div>
 
     <form method="POST" action="index2.php">
