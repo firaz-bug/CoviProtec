@@ -6,7 +6,7 @@
 	}
 */
 	include("connection_hosp.php");
-	
+	date_default_timezone_set("Asia/Kolkata");
 	$i=1;
 	$query_update = "CREATE event IF NOT EXISTS newevent ON SCHEDULE EVERY 10 SECOND STARTS CURRENT_TIMESTAMP
 			DO

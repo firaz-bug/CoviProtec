@@ -174,7 +174,7 @@
 
 								if( $diff->format("%R") == '+'){
 										$numdays = intval($diff->format("%a"));
-										if( $numdays >= 0){
+										if( $numdays >= 30){
 														echo "<select name='dose' id='dose' class='form-select' required>
 																	<option value=''>NIL</option>
 																	<option value='dose2'>dose2</option>
@@ -188,25 +188,27 @@
 													echo "<p>It is advised that the second dose of vaccine should be taken only after a 30 days interval!
 																the option for choosing dose2 will be available only after 30 days have passed after taking dose1</p>";
 												}
-									}
+								}
 
-							else{
-									echo"<select name='dose' id='dose' class='form-select' required>
-											<option value=''>NIL</option>
-											</select>";
-											echo "<p>Your dose 1 is yet to be completed</p>";
-										}
+								else{
+										echo"<select name='dose' id='dose' class='form-select' required>
+												<option value=''>NIL</option>
+												</select>";
+												echo "<p>Your dose 1 is yet to be completed</p>";
+								}
 
 							}
-			/*				else	if($resultexist['dose2'] == 1){
+
+							else	if($resultexist['dose2'] == 1){
 									echo"<select name='dose' id='dose' required>
 												<option value=''>NIL</option>
 												</select>";
 
-								}
-		*/
+							}
+		
 						}
 					}
+
 					else if($_SESSION['user_number'] == 2){
 						echo "Aadhar Id : ";
 						echo $_SESSION["aadhar_ID_person2"];
@@ -236,7 +238,7 @@
 
 								if( $diff->format("%R") == '+'){
 										$numdays = intval($diff->format("%a"));
-										if( $numdays >= 0){
+										if( $numdays >= 30){
 														echo "<select name='dose' id='dose'
 														class='form-select' required>
 																	<option value=''>NIL</option>
@@ -306,7 +308,7 @@
 								if( $diff1->format("%R") == '+' &&  $diff2->format("%R") == '+'){
 										$numdays1 = intval($diff1->format("%a"));
 										$numdays2 = intval($diff2->format("%a"));
-										if( $numdays1 >= 0 && $numdays2 >= 0){
+										if( $numdays1 >= 30 && $numdays2 >= 30){
 											echo "<select name='dose' id='dose' class='form-select' required>
 														<option value=''>NIL</option>
 														<option value='dose2'>dose2</option>
@@ -319,7 +321,7 @@
 													echo "<p>It is advised that the second dose of vaccine should be taken only after a 30 days interval!
 																the option for choosing dose2 will be available only after 30 days have passed after taking dose1</p>";
 												}
-									}
+								}
 								else{
 									echo"<select name='dose' id='dose' class='form-select' required>
 											<option value=''>NIL</option>
