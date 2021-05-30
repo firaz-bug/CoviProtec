@@ -496,8 +496,8 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="icon-box">
               <div class="icon"><i class="fas fa-user"></i></div>
-              <h4><input type = "submit" class="btn btn-primary" value = "Current User" name ="user1"></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <h4><input type = "submit" class="btn btn-primary" value = "Account Holder" name ="user1"></h4>
+              <p>Click here to schedule an appointment for the account holder</p>
             </div>
           </div>';
 
@@ -506,16 +506,16 @@
 		          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
 		            <div class="icon-box">
 		              <div class="icon"><i class="fas fa-heart"></i></div>
-		              <h4><input type = "submit" class="btn btn-primary" value = "Member 2" name ="user2"></h4>
-		              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+		              <h4><input type = "submit" class="btn btn-primary" value = "Partner" name ="user2"></h4>
+		              <p>Click here to schedule an appointment for the person you added</p>
 		            </div>
 		          </div>
 
 		          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
 		            <div class="icon-box">
 		              <div class="icon"><i class="fas fa-user-friends"></i></div>
-		              <h4><input type = "submit" class="btn btn-primary" value = "both user" name ="combined"></h4>
-		              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+		              <h4><input type = "submit" class="btn btn-primary" value = "Combined" name ="combined"></h4>
+		              <p>Click here for combined booking</p>
 		            </div>
 		          </div>';
 		    }

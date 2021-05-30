@@ -83,10 +83,21 @@
 								<label for="city">Select City of Operation</label>
               					<select name="city" id="city" class="form-select">
 									<option value="chennai">Chennai</option>
-									<option value="pondy">pondicheri</option>
-									<option value="madurai">madurai</option>
-									<option value="coimbatore">coimbatore</option>
-									<option value="salem">salem</option>
+									<option value="coimbatore">Coimbatore</option>
+									<option value="pondy">pondicherry</option>
+									<option value="madurai">Madurai</option>
+									<option value="trichy">Tiruchirappalli</option>
+									<option value="salem">Salem</option>
+									<option value="vellore">Vellore</option>
+									<option value="thanjavur">Thanjavur</option>
+									<option value="ooty">Ooty</option>
+									<option value="kanyakumari">Kanyakumari</option>
+									<option value="hosur">Hosur</option>
+									<option value="tirunelveli">Tirunelveli</option>
+									<option value="kodaikanal">Kodaikanal</option>
+									<option value="rameshwaram">Rameshwaram</option>
+									<option value="namakkal">Namakkal</option>
+									<option value="krishnagiri">Krishnagiri</option>		
 								</select>
 								</div>
 
