@@ -67,7 +67,7 @@
 
 								<div class="form-group">
 									<label for="aadhar_ID">Aadhar ID</label>
-									<input id="aadhar_ID" type="text" class="form-control" name="aadhar_ID" required>
+									<input id="aadhar_ID" type="text" class="form-control" name="aadhar_ID" minlength="12" required>
 									<div class="invalid-feedback">
 										 invalid aadhar ID
 									</div>

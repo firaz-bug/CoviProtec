@@ -20,7 +20,7 @@
 		
 		$result;
 		
-		if( !preg_match("/^[a-zA-Z]*$/", $name)){
+		if( !preg_match("/^[a-zA-Z ]*$/", $name)){
 			$result = true;
 		}
 		

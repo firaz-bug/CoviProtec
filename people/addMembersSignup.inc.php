@@ -28,12 +28,16 @@
 				}
 				
 				else{
+					header("Location: index.php?error=filetoobig");
+					exit();
 					echo "File is too big! File size should be less than 500KB.";
 				}
 				
 			}
 			
 			else{
+				header("Location: index.php?error=fileuploaderror");
+				exit();
 				echo "There was an error uploading your file!";
 			}		
 		}
@@ -70,6 +74,8 @@
 	}
 	
 	else{
+		header("Location: index.php?error=fileincorrectformat");
+			exit();
 		header("Location: index.php");
 		exit();
 	}
