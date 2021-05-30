@@ -20,6 +20,15 @@
 		else if($_GET["error"] == "idexists"){
 			echo "<p>Invalid NABH ID</p>";
 		}
+		else if($_GET["error"] == "filetoobig"){
+			echo "<p>File size is too big!! Size should be less than 500 KB!</p>";
+		}
+		else if($_GET["error"] == "fileuploaderror"){
+			echo "<p>There was an error uploading your file! Try again!</p>";
+		}
+		else if($_GET["error"] == "fileincorrectformat"){
+			echo "<p>Files of type PDF or JPG or JPEG can be uploaded!</p>";
+		}
 	}
 ?>
 <!DOCTYPE html>

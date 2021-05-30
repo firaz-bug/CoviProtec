@@ -28,17 +28,23 @@
 				}
 				
 				else{
+					header("Location: signup.php?error=filetoobig");
+					exit();
 					echo "File is too big! File size should be less than 500KB.";
 				}
 				
 			}
 			
 			else{
+				header("Location: signup.php?error=fileuploaderror");
+				exit();
 				echo "There was an error uploading your file!";
 			}		
 		}
 	
 		else{
+			header("Location: signup.php?error=fileincorrectformat");
+			exit();
 			echo "Files of type PDF or JPG or JPEG can be uploaded";
 		}
 	
